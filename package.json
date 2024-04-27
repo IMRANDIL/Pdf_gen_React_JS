@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "draft-js": "^0.11.7",
+    "jspdf": "^2.5.1",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
