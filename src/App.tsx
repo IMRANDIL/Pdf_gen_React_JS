@@ -12,7 +12,7 @@ function App() {
     <div>
       <h1 className='title-text'>A Text Editor</h1>
       <TextEditor/>
-      <PdfGenerator text={'Ali'}/>
+      <PdfGenerator text={''}/>
     </div>
     </>
   )
