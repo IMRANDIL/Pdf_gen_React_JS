@@ -2,6 +2,9 @@
 
 This project is a simple web application that allows users to compose text using a rich text editor and generate PDF documents from the text content.
 
+![Screenshot 2024-04-28 094230](https://github.com/IMRANDIL/Pdf_gen_React_JS/assets/71559091/b24514af-d3dc-45f5-ac2c-685a49969979)
+
+
 ## Features
 
 - **Rich Text Editing**: Utilizes the Draft.js library to provide a rich text editing experience with various formatting options.
