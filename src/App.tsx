@@ -1,12 +1,17 @@
 import './App.css'
+import PdfGenerator from './components/PdfGenerator'
+import TextEditor from './components/TextEditor'
+
+
+
 
 function App() {
-  
 
   return (
     <>
     <div>
-      Hey
+      <TextEditor/>
+      <PdfGenerator text={'Ali'}/>
     </div>
     </>
   )
