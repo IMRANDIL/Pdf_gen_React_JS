@@ -1,30 +1,46 @@
-# React + TypeScript + Vite
+# Text Editor with PDF Generation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple web application that allows users to compose text using a rich text editor and generate PDF documents from the text content.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Rich Text Editing**: Utilizes the Draft.js library to provide a rich text editing experience with various formatting options.
+- **PDF Generation**: Converts the text content into a PDF document that users can download.
+- **Toast Notifications**: Provides informative toast notifications to alert users about important actions or errors.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React.js: A JavaScript library for building user interfaces.
+- Draft.js: A rich text editor framework for React.
+- jspdf: A JavaScript library for generating PDF documents in the browser.
+- react-toastify: A library for adding toast notifications to React applications.
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+To run the project locally, follow these steps:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Clone this repository to your local machine.
+2. Navigate to the project directory in your terminal.
+3. Run `npm install` to install the dependencies.
+4. Run `npm start` to start the development server.
+5. Open your browser and navigate to `http://localhost:3000` to view the application.
+
+## Usage
+
+1. Upon opening the application, you'll see a rich text editor where you can compose your text.
+2. Use the formatting options in the toolbar to style your text as desired.
+3. Click the "Generate PDF" button to convert the text into a PDF document.
+4. Download the generated PDF document and save it to your device.
+
+## Contributing
+
+Contributions are welcome! If you find any bugs or have suggestions for improvements, feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+---
+
+Made with ❤️ by Ali Imran Adil
