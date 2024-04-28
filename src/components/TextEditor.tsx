@@ -11,10 +11,10 @@ const TextEditor = ({ editorState, handleEditorChange, handleKeyCommand, handleP
   // Focus the editor when the component mounts
   useEffect(() => {
     if (editorRef.current) {
-      editorRef.current.focus();
+      const editorElement = editorRef.current.editor.editor; // Access the underlying editor element
+      editorElement.focus(); // Focus on the contentEditable element inside the editor
     }
   }, []);
-
   return (
     <div>
       <div style={{ border: "1px solid black", minHeight: "300px" }}>
