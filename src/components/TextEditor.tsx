@@ -2,14 +2,24 @@
 
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { Editor } from "react-draft-wysiwyg";
+import { useEffect, useRef } from "react";
 
 const TextEditor = ({ editorState, handleEditorChange, handleKeyCommand, handlePastedText, clearContent, onBoldClick, onItalicClick }) => {
- 
+  // Create a ref to store the editor element
+  const editorRef = useRef(null);
+
+  // Focus the editor when the component mounts
+  useEffect(() => {
+    if (editorRef.current) {
+      editorRef.current.focus();
+    }
+  }, []);
 
   return (
     <div>
       <div style={{ border: "1px solid black", minHeight: "300px" }}>
         <Editor
+        ref={editorRef}
           editorState={editorState}
           toolbar={{
             options: [
