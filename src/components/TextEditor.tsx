@@ -2,20 +2,9 @@
 
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { Editor } from "react-draft-wysiwyg";
-import useTextEditor from "../customhooks/useTextEditor";
 
-const TextEditor = () => {
-  const {
-    editorState,
-    handleKeyCommand,
-    handlePastedText,
-    handleEditorChange,
-    clearContent,
-    onBoldClick,
-    onItalicClick
-  } = useTextEditor();
-
-  
+const TextEditor = ({ editorState, handleEditorChange, handleKeyCommand, handlePastedText, clearContent, onBoldClick, onItalicClick }) => {
+ 
 
   return (
     <div>
