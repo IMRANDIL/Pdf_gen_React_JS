@@ -25,7 +25,7 @@ const PdfGenerator = ({ editorState }) => {
   };
 
   return (
-    <button onClick={generatePdf}>Generate PDF</button>
+    <button className='pdfbutton' onClick={generatePdf}>Generate PDF</button>
   );
 };
 
