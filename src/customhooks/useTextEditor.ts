@@ -7,7 +7,7 @@ const useTextEditor = () => {
       EditorState.createEmpty()
     );
   
-    const handleKeyCommand = (command) => {
+    const handleKeyCommand = (command: string) => {
       const newState = RichUtils.handleKeyCommand(editorState, command);
       if (newState) {
         setEditorState(newState);
@@ -37,7 +37,7 @@ const useTextEditor = () => {
         const newState = RichUtils.toggleInlineStyle(editorState, 'ITALIC');
         handleEditorChange(newState);
       };
-      
+
     return {
       editorState,
       handleKeyCommand,

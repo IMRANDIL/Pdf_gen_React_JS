@@ -2,8 +2,27 @@
 
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { Editor } from "react-draft-wysiwyg";
+import { EditorState } from "draft-js";
 
-const TextEditor = ({ editorState, handleEditorChange, handleKeyCommand, handlePastedText, clearContent, onBoldClick, onItalicClick }) => {
+const TextEditor = (
+  {
+    editorState,
+    handleEditorChange,
+    handleKeyCommand,
+    handlePastedText,
+    clearContent,
+    onBoldClick,
+    onItalicClick
+  }: {
+    editorState: EditorState;
+    handleEditorChange: (newEditorState: EditorState) => void;
+    handleKeyCommand: (command: string) => string;
+    handlePastedText: (text: string, html: string) => void;
+    clearContent: () => void;
+    onBoldClick: () => void;
+    onItalicClick: () => void;
+  }
+) => {
  
 
   return (

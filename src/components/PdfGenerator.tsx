@@ -1,9 +1,9 @@
-import { convertToRaw } from 'draft-js';
+import { EditorState, convertToRaw } from 'draft-js';
 import jsPDF from 'jspdf';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const PdfGenerator = ({ editorState }) => {
+const PdfGenerator = ({ editorState }: { editorState: EditorState }) => {
   const generatePdf = () => {
     if (!editorState || editorState.getCurrentContent().hasText() === false) {
       toast.error('Cannot generate PDF: Editor content is empty');
