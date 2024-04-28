@@ -66,9 +66,12 @@ const TextEditor = () => {
           handlePastedText={handlePastedText}
         />
       </div>
+      <div className="button-container">
       <button onClick={onBoldClick}>Bold</button>
       <button onClick={onItalicClick}>Italic</button>
       <button onClick={handleClearContent}>Clear Content</button>
+      </div>
+     
     </div>
   );
 };

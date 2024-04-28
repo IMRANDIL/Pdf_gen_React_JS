@@ -5,7 +5,9 @@ const PdfGenerator = ({ text }) => {
     // Code to generate PDF from the provided text
   };
 
-  return <Button onClick={generatePdf}>Generate PDF</Button>;
+  return (
+    <Button onClick={generatePdf}>Generate PDF</Button>
+  )
 };
 
 export default PdfGenerator;
