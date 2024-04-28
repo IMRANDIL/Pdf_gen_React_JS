@@ -10,6 +10,7 @@ function App() {
   return (
     <>
     <div>
+      <h1 className='title-text'>A Text Editor</h1>
       <TextEditor/>
       <PdfGenerator text={'Ali'}/>
     </div>
