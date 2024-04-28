@@ -1,4 +1,4 @@
-import { Button } from "react-bootstrap";
+
 
 const PdfGenerator = ({ text }) => {
   const generatePdf = () => {
@@ -6,7 +6,7 @@ const PdfGenerator = ({ text }) => {
   };
 
   return (
-    <Button onClick={generatePdf}>Generate PDF</Button>
+    <button onClick={generatePdf}>Generate PDF</button>
   )
 };
 
