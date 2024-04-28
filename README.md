@@ -26,7 +26,7 @@ To run the project locally, follow these steps:
 2. Navigate to the project directory in your terminal.
 3. Run `npm install` to install the dependencies.
 4. Run `npm start` to start the development server.
-5. Open your browser and navigate to `http://localhost:3000` to view the application.
+5. Open your browser and navigate to [PDF Generator React JS Application](https://pdf-gen-react-js.vercel.app/) to view the application.
 
 ## Usage
 
