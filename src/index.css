@@ -2,6 +2,10 @@
     text-align: center;
 }
 
+body{
+    background-color: rgba(143, 108, 61, 0.634);
+}
+
 button{
     cursor: pointer;
 }

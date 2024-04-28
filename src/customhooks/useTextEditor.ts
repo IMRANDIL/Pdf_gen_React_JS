@@ -29,13 +29,15 @@ const useTextEditor = () => {
     };
 
     const onBoldClick = () => {
-        handleEditorChange(RichUtils.toggleInlineStyle(editorState, 'BOLD'));
+        const newState = RichUtils.toggleInlineStyle(editorState, 'BOLD');
+        handleEditorChange(newState);
       };
     
-      const onItalicClick = () => {
-        handleEditorChange(RichUtils.toggleInlineStyle(editorState, 'ITALIC'));
+    const onItalicClick = () => {
+        const newState = RichUtils.toggleInlineStyle(editorState, 'ITALIC');
+        handleEditorChange(newState);
       };
-  
+      
     return {
       editorState,
       handleKeyCommand,
