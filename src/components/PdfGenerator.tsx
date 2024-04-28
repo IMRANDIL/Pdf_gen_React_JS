@@ -1,4 +1,4 @@
-import {  convertToRaw } from 'draft-js';
+import { convertToRaw } from 'draft-js';
 import jsPDF from 'jspdf';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -18,7 +18,11 @@ const PdfGenerator = ({ editorState }) => {
 
     // Set font size and add text to the document
     doc.setFontSize(12);
-    doc.text(content, 10, 10);
+    // Adjust margins and text width to prevent cutting off
+    const marginLeft = 10;
+    const marginTop = 10;
+    const maxWidth = doc.internal.pageSize.getWidth() - (marginLeft * 2);
+    doc.text(content, marginLeft, marginTop, { maxWidth });
 
     // Save the PDF document
     doc.save('generated_document.pdf');
