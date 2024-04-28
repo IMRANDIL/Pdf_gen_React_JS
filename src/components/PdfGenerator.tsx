@@ -2,8 +2,10 @@ import { EditorState, convertToRaw } from 'draft-js';
 import jsPDF from 'jspdf';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import addCustomFont from './NotoSansDevanagari-VariableFont_wdth,wght-normal'
 
 const PdfGenerator = ({ editorState }: { editorState: EditorState }) => {
+  addCustomFont()
   const generatePdf = () => {
     if (!editorState || editorState.getCurrentContent().hasText() === false) {
       toast.error('Cannot generate PDF: Editor content is empty');
@@ -22,8 +24,10 @@ const PdfGenerator = ({ editorState }: { editorState: EditorState }) => {
     const marginLeft = 10;
     const marginTop = 10;
     const maxWidth = doc.internal.pageSize.getWidth() - (marginLeft * 2);
+    console.log("font list", doc.getFontList());//check all added font
+    doc.setFont("NotoSansDevanagari-VariableFont_wdth,wght");
     doc.text(content, marginLeft, marginTop, { maxWidth });
-
+   
     // Save the PDF document
     doc.save('generated_document.pdf');
   };
